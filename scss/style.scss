@@ -67,12 +67,6 @@ header {
         height: 100px;
         padding: 25px;
     }
-    .current {
-        border-bottom: 5px solid $accent-color;
-        a { 
-            color: $accent-color !important;
-        }
-    }
     .carousel {
         height: 80vh;
         display: flex;
@@ -125,6 +119,14 @@ header {
             background-color: black;
         }
     }
+    .current {
+        a { 
+            color: $accent-color !important;
+        }
+    }
+}
+.current {
+    border-bottom: 5px solid $accent-color;
 }
 
 /*Styles for section about*/
@@ -174,6 +176,71 @@ section {
     }
 }
 
+/*Styles for section projects*/
+.projects {
+    .nav {
+        background-color: #ededed;
+        display: inline-block;
+        border: 1px solid #cfcfcf;
+        border-radius: 30px;
+        padding: 0 20px;
+        margin-bottom: 50px;
+        li {
+            padding: 10px;
+            border-right: 1px solid #cfcfcf;
+            &:last-of-type {
+                border-right: none;
+            }
+            a {
+                color: black;
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+        .active {
+            a {
+                background-color: transparent !important;
+                color: #000 !important;
+            }
+        }
+    }
+    img {
+        width: 100%;
+    }
+    .row {
+        margin-bottom: 50px;
+    }
+    .col-md-3 {
+        position: relative;
+    }
+    .layer {
+        position: absolute;	
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        h4, p {
+            visibility: hidden;
+            color: white;
+            padding: 0 20px;
+        }
+        p {
+            font-size: 12px;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.75);
+            h4, p {
+                visibility: visible;
+            }
+        }
+    }
+}
+
 /*Media queries*/
 @media (max-width: 500px) {
     header {
@@ -193,6 +260,21 @@ section {
         iframe {
             max-width: 300px; 
             height: auto;
+        }
+    }
+    .projects {
+        .col-xs-6 {
+            width: 100%;
+        }
+        .nav {
+            padding: 0 10px;
+            li {
+                padding: 10px 5px;
+                a {
+                    font-size: 8px !important;
+                    padding: 10px 0;
+                }
+            }
         }
     }
 }
@@ -232,6 +314,17 @@ section {
             }
         }
     }
+    /*Styles for section projects*/
+    .projects {
+        .nav {
+            li {
+                a {
+                    font-size: 10px !important;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -240,6 +333,23 @@ section {
         text-align: center;
         button {
             margin: 50px auto;
+        }
+    }
+    /*Styles for section projects*/
+    .projects {
+        img {
+            margin-bottom: 50px;
+        }
+        .row {
+            margin-bottom: 0;
+        }
+        .layer {
+            bottom: 50px;
+        }
+        .nav {
+            li a {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -254,13 +364,10 @@ section {
             }
         }
         .carousel {
-            //height: 80vh;
             h1 {
                 font-size: 58px;
-                //margin-bottom: 20px;
             }
             h4 {
-                //margin-bottom: 40px;
                 font-size: 20px;
             }
         }
