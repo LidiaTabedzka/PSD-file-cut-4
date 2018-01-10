@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+$accent-color: #b88b58;
+@mixin button-style {
+    background-color: $accent-color;
+    border: none;
+    width: 200px;
+    height: 50px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    &:hover {
+        background-color: black;
+        color: $accent-color;
+    }
+}
+
+/*Styles for section header*/
+header {
+    background-image: url('../images/bg-img-01.png');
+    height: 100vh;
+    color: white;
+    .navbar-inverse {
+        background-color: #000;
+        border-color: #000;
+        .navbar-nav {
+            padding-top: 25px;
+            height: 100px;
+            li {
+            height: 100%;
+                a {
+                    color: white;
+                    font-weight: bold;
+                    text-align: center;
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+    .navbar {
+        border-radius: 0;
+    }
+    .navbar-brand {
+        height: 100px;
+        padding: 25px;
+    }
+    .current {
+        border-bottom: 5px solid $accent-color;
+        a { 
+            color: $accent-color !important;
+        }
+    }
+    .carousel {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h4 {
+            margin-bottom: 40px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .accent-color {
+            color: $accent-color;
+        }
+        .item {
+            height: 300px;
+            button {
+                @include button-style;
+            }
+        }
+        #myCarousel {
+            width: 100%;
+        }
+        .carousel-indicators {
+            bottom: 0;
+            li {
+                border: 2px solid $accent-color;
+            }
+            .active {
+                background-color: $accent-color;
+            }
+        }
+    }
+    .call-button {
+        background-color: $accent-color;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 20px;
+        right: 100px;
+        height: 65px;
+        width: 65px;
+        border: none;
+        transition: 0.3s;
+        &:hover {
+            background-color: black;
+        }
+    }
+}
+
+/*Media queries*/
+@media (max-width: 500px) {
+    header {
+        .carousel {
+            h1 {
+                font-size: 28px;
+            }
+            h4 {
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    /*Styles for section: header*/
+    header {
+        height: auto;
+        background-size: cover;
+        .navbar-inverse {
+            .navbar-nav {
+                height: auto;
+                padding: 0;
+            }
+        }
+        .current {
+            border-bottom: none;
+        }
+    }
+}
+@media (min-width: 501px) and (max-width: 767px) {
+     /*Styles for section: header*/
+     header {
+        .carousel {
+            height: 85vh;
+            h1 {
+                font-size: 40px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /*Styles for section: header*/
+    header {
+        .navbar-nav {
+            font-size: 10px;
+            li a {
+                padding: 10px 5px;
+            }
+        }
+        .carousel {
+            //height: 80vh;
+            h1 {
+                font-size: 58px;
+                //margin-bottom: 20px;
+            }
+            h4 {
+                //margin-bottom: 40px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    /*Styles for section: header*/
+    header {
+        .navbar-nav {
+            font-size: 12px;
+            li a {
+                padding: 10px;
+            }
+        }
+    }
+}
