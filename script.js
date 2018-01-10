@@ -1,5 +1,5 @@
 var navigation = $("#nav");
-var navigationItem = $(navigation.find("li a"));
+var navigationItem = $(navigation.find("li"));
 
 navigationItem.click(function(){
     var activeItem = navigation.find("li.current");
