@@ -291,7 +291,8 @@ section {
 
 /*Styles for section clients*/
 .clients {
-    background-color: #F7F7F7;
+    background-color: #ededed;
+    border: 1px solid #cfcfcf;
     .container {
         padding-bottom: 100px;
     }
@@ -320,6 +321,50 @@ section {
             .active {
                 background-color: $accent-color;
             }
+        }
+    }
+}
+
+/*Styles for section brands*/
+.brands {
+    .logo-div {
+        height: 80px;
+    }
+}
+
+/*Styles for section price*/
+.price {
+    background-color: #ededed;
+    border: 1px solid #cfcfcf;
+    .price-div {
+        background-color: white;
+        padding: 40px 10px;
+    }
+    h4 {
+        color: #242424;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    h6 {
+        font-size: 10px;
+        color: #aeaeae;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    p {
+        color: #7e7e7e;
+        font-size: 10px;
+        margin: 0 0 2px;
+        font-weight: bold
+    }
+    button {
+        @include button-style;
+        margin-top: 30px;
+        width: 130px;
+        background-color: #373737;
+        &:hover {
+            background-color: $accent-color;
+            color: white;
         }
     }
 }
@@ -450,6 +495,15 @@ section {
             padding: 0px;
         }
 
+    }
+    /*Styles for section price*/
+    .price {
+        .container {
+            padding-bottom: 0;
+        }
+        .price-div {
+            margin-bottom: 50px;
+        }
     }
 }
 
