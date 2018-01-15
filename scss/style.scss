@@ -289,6 +289,41 @@ section {
     }
 }
 
+/*Styles for section clients*/
+.clients {
+    background-color: #F7F7F7;
+    .container {
+        padding-bottom: 100px;
+    }
+    h3, h4 {
+        font-weight: bold;
+        color: black;
+    }
+    p {
+        padding: 0px 100px;
+        color: #7e7e7e;
+    }
+    .carousel {
+        .client-img {
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+        }
+        .quote-img {
+            margin: 30px auto 20px;
+        }
+        .carousel-indicators {
+            bottom: -50px;
+            li {
+                border: 2px solid $accent-color;
+            }
+            .active {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
+
 /*Media queries*/
 @media (max-width: 500px) {
     header {
@@ -408,6 +443,13 @@ section {
                 font-size: 12px;
             }
         }
+    }
+    /*Styles for section clients*/
+    .clients {
+        p {
+            padding: 0px;
+        }
+
     }
 }
 
