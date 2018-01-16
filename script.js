@@ -17,3 +17,8 @@ navigationProjectsItem.click(function(){
     activeItem.removeClass();
     $(this).addClass("current");
 });
+
+$(".scrolltop-button").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });

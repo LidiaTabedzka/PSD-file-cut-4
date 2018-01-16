@@ -7,7 +7,8 @@ body {
     font-size: 14px;
     box-sizing: border-box;
 }
-section {
+section,
+footer {
     .container {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -98,7 +99,8 @@ header {
             bottom: 0;
         }
     }
-    .call-button {
+    .call-button,
+    .scrolltop-button {
         background-color: $accent-color;
         border-radius: 50%;
         position: fixed;
@@ -111,6 +113,19 @@ header {
         z-index: 100;
         &:hover {
             background-color: black;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .scrolltop-button {
+        right: auto;
+        left: 100px;
+        font-size: 60px;
+        .fa {
+            position: absolute;
+            top: 0;
+            left: 15px;
         }
     }
     .current {
@@ -550,6 +565,57 @@ section {
     }
 }
 
+/*Styles for section: footer*/
+footer {
+    background-color: black;
+    color: white;
+    .fa {
+        background-color: #373737;
+        border-radius: 50%;
+        height: 33px;
+        width: 33px;
+        font-size: 17px;
+        padding: 7px 0 0 9px;
+        margin-right: 5px;
+        transition: 0.3s;
+        &:hover {
+            background-color: $accent-color;
+        }
+    }
+    p {
+        color: #7e7e7e;
+        font-size: 12px;
+    }
+    .subscribe-div {
+        background-color: #373737;
+        display: flex;
+        flex-direction: column;
+        height: 195px;
+        border-radius: 2px;
+        align-items: center;
+        justify-content: center;
+    }
+    input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #aeaeae;
+        padding: 10px;
+        color: #9e9e9e;
+        &::-webkit-input-placeholder{
+            font-weight: bold;
+            color: #9e9e9e;
+        }
+    }
+    button {
+        @include button-style;
+        margin-top: 20px;
+        border: 2px solid transparent;
+        &:hover {
+            border-color: $accent-color;
+        }
+    }
+}
+
 /*Media queries*/
 @media (max-width: 500px) {
     header {
@@ -783,6 +849,19 @@ section {
         }
         img {
             width: 50%;
+        }
+    }
+    /*Styles for section: footer*/
+    footer {
+        text-align: center;
+        p {
+            margin: 30px 0;
+        }
+        .fa {
+            padding-left: 0;
+        }
+        .footer-copyright {
+            margin-top: 30px;
         }
     }
 }
