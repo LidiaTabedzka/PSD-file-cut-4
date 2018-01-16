@@ -96,12 +96,6 @@ header {
         }
         .carousel-indicators {
             bottom: 0;
-            li {
-                border: 2px solid $accent-color;
-            }
-            .active {
-                background-color: $accent-color;
-            }
         }
     }
     .call-button {
@@ -262,12 +256,6 @@ section {
         }
         .carousel-indicators {
             bottom: 0;
-            li {
-                border: 2px solid $accent-color;
-            }
-            .active {
-                background-color: $accent-color;
-            }
         }
         .team-column {
             background-color: white;
@@ -315,12 +303,18 @@ section {
         }
         .carousel-indicators {
             bottom: -50px;
-            li {
-                border: 2px solid $accent-color;
-            }
-            .active {
-                background-color: $accent-color;
-            }
+        }
+    }
+}
+
+.carousel {
+    .carousel-indicators {
+        //bottom: -50px;
+        li {
+            border: 2px solid $accent-color;
+        }
+        .active {
+            background-color: $accent-color;
         }
     }
 }
@@ -366,6 +360,64 @@ section {
             background-color: $accent-color;
             color: white;
         }
+    }
+}
+
+/*Styles for section packages*/
+.packages {
+    ul {
+        list-style-image: url('../images/icon.png');
+        li {
+            padding-left: 20px;
+        }
+    }
+    h3 {
+        font-size: 21px;
+        font-weight: bold;
+        color: #242424;
+    }
+    p {
+        color: #5b5b5b;
+    }
+    .carousel {
+        .carousel-indicators {
+            bottom: -70px;
+        }
+        .item {
+            border-bottom: 1px solid #bebebe;
+            padding-bottom: 20px;
+        }
+    }
+    button {
+        @include button-style;
+        margin-top: 100px;
+    }
+}
+
+/*Styles for section facts*/
+.facts {
+    background-color: black;
+    color: white;
+    h1 {
+        color: inherit;
+    }
+    h2 {
+        color: $accent-color;
+        font-size: 48px;
+        font-weight: bold;
+    }
+    h3 {
+        height: 60px;
+    }
+    .line {
+        background-color: #7e7e7e;
+        height: 4px;
+        width: 20px;
+        display: inline-block;
+    }
+    p {
+        color: #7e7e7e;
+        font-size: 12px;
     }
 }
 
@@ -437,6 +489,15 @@ section {
             margin-bottom: 50px;
         }
     }
+    /*Styles for section: facts*/
+    .facts {
+        h3 {
+            height: auto;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+    }
 }
 @media (min-width: 501px) and (max-width: 767px) {
      /*Styles for section: header*/
@@ -505,6 +566,21 @@ section {
             margin-bottom: 50px;
         }
     }
+    /*Styles for section packages*/
+    .packages {
+        text-align: center;
+        ul {
+            list-style-position: inside;
+            padding-left: 0;
+            li {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+        }
+        img {
+            width: 50%;
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -534,6 +610,12 @@ section {
             }
         }
     }
+    /*Styles for section: facts*/
+    .facts {
+        .auto-height {
+            height: auto;
+        }
+    }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
     /*Styles for section: header*/
@@ -543,6 +625,12 @@ section {
             li a {
                 padding: 10px;
             }
+        }
+    }
+    /*Styles for section: facts*/
+    .facts {
+        h3 {
+            height: 80px;
         }
     }
 }
