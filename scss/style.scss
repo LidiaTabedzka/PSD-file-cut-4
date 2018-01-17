@@ -1,22 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-section,
-footer {
-    .container {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
-
 /*Variables*/
 $accent-color: #b88b58;
+$background-light: #F7F7F7;
+$background-dark: #000;
 @mixin button-style {
     background-color: $accent-color;
     border: none;
@@ -34,6 +21,50 @@ $accent-color: #b88b58;
     &:hover {
         background-color: black;
         color: $accent-color;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+/*General styles*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+section,
+footer {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+section {
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #000;
+    }
+    h5 {
+        font-weight: bold;
+        color: #aeaeae;
+        margin-bottom: 50px;
+    }
+}
+.current {
+    border-bottom: 5px solid $accent-color;
+}
+.carousel {
+    .carousel-indicators {
+        li {
+            border: 2px solid $accent-color;
+        }
+        .active {
+            background-color: $accent-color;
+        }
     }
 }
 
@@ -104,7 +135,7 @@ header {
         background-color: $accent-color;
         border-radius: 50%;
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         right: 100px;
         height: 65px;
         width: 65px;
@@ -122,6 +153,7 @@ header {
         right: auto;
         left: 100px;
         font-size: 60px;
+        display: none;
         .fa {
             position: absolute;
             top: 0;
@@ -134,24 +166,10 @@ header {
         }
     }
 }
-.current {
-    border-bottom: 5px solid $accent-color;
-}
 
 /*Styles for section about*/
-section {
-    h1 {
-        font-size: 30px;
-        font-weight: bold;
-        color: #000;
-    }
-    h5 {
-        font-weight: bold;
-        color: #aeaeae;
-        margin-bottom: 50px;
-    }
-}
 .about {
+    background-color: $background-light;
     p {
         color: #242424;
     }
@@ -162,7 +180,7 @@ section {
 }
 /*Styles for section services*/
 .services {
-    background-color: #000;
+    background-color: $background-dark;
     h1, h3 {
         color: white;
         font-weight: bold;
@@ -171,6 +189,7 @@ section {
         color: $accent-color;
         font-size: 60px;
         margin-bottom: 30px;
+        transition: 0.3s;
     }
     p {
         color: #7e7e7e;
@@ -182,11 +201,15 @@ section {
         &:first-of-type {
             border-left: 2px solid #bebebe;
         }
+        &:hover .fa {
+            color: white;
+        }
     }
 }
 
 /*Styles for section projects*/
 .projects {
+    background-color: $background-light;
     .nav {
         background-color: #ededed;
         display: inline-block;
@@ -259,18 +282,29 @@ section {
     h1 {
         color: white;
     }
-    .carousel {
-        height: 60vh;
-        color: #242424;
+    #carousel2 {
+        width: 1125px;
+        overflow: hidden;
+        margin: 0 auto;
+        color: #242424;  
+        ul {
+            list-style-type: none;
+            height: 401px;
+            width: 3375px;
+            padding: 0;
+            margin: 0;
+            li {
+                float: left;
+                width: 350px;
+                margin: 0 12.5px;
+            }
+        }
         h3 {
             font-size: 21px;
             font-weight: bold;
         }
         h4 {
             font-size: 14px;
-        }
-        .carousel-indicators {
-            bottom: 0;
         }
         .team-column {
             background-color: white;
@@ -290,11 +324,31 @@ section {
             }
         }
     }
+    #carousel2-indicators {
+        ol {
+            margin-top: 30px;
+            padding: 0;
+            li {
+                width: 12px;
+                height: 12px;
+                border: 2px solid $accent-color;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 2px;
+            }
+            .active {
+                background-color: $accent-color;
+            }
+            .display {
+                display: none;
+            }
+        }
+    }
 }
 
 /*Styles for section clients*/
 .clients {
-    background-color: #ededed;
+    background-color: $background-light;
     border: 1px solid #cfcfcf;
     .container {
         padding-bottom: 100px;
@@ -318,18 +372,6 @@ section {
         }
         .carousel-indicators {
             bottom: -50px;
-        }
-    }
-}
-
-.carousel {
-    .carousel-indicators {
-        //bottom: -50px;
-        li {
-            border: 2px solid $accent-color;
-        }
-        .active {
-            background-color: $accent-color;
         }
     }
 }
@@ -411,7 +453,7 @@ section {
 
 /*Styles for section facts*/
 .facts {
-    background-color: black;
+    background-color: $background-dark;
     color: white;
     h1 {
         color: inherit;
@@ -489,7 +531,7 @@ section {
 
 /*Styles for section: contact*/
 .contact {
-    background-color: #ededed;
+    background-color: $background-light;
     form {
         display: flex;
         flex-direction: column;
@@ -567,7 +609,7 @@ section {
 
 /*Styles for section: footer*/
 footer {
-    background-color: black;
+    background-color: $background-dark;
     color: white;
     .fa {
         background-color: #373737;
@@ -754,6 +796,12 @@ footer {
             padding: 15px;
         }
     }
+    /*Styles for section: team*/
+    .team {
+        #carousel2 {
+            width: 295px;
+        }
+    }
 }
 @media (min-width: 501px) and (max-width: 767px) {
      /*Styles for section: header*/
@@ -864,6 +912,16 @@ footer {
             margin-top: 30px;
         }
     }
+    /*Styles for section: team*/
+    .team {
+        #carousel2 {
+            ul {
+                li {
+                    width: 270px;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -899,6 +957,12 @@ footer {
             height: auto;
         }
     }
+    /*Styles for section: team*/
+    .team {
+        #carousel2 {
+            width: 590px;
+        }
+    }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
     /*Styles for section: header*/
@@ -914,6 +978,12 @@ footer {
     .facts {
         h3 {
             height: 80px;
+        }
+    }
+    /*Styles for section: team*/
+    .team {
+        #carousel2 {
+            width: 750px;
         }
     }
 }

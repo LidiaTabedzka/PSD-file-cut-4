@@ -11,6 +11,8 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js"></script>
     </head>
     <body>
         <header>
@@ -51,17 +53,17 @@
 						<div class="item active">
                             <h1>Design is about<br><span class="accent-color">communications</span></h1>
                             <h4>call us: +00 0 1234 5678</h4>
-							<button>Get in touch</button>
+							<a href="#contactSection"><button>Get in touch</button></a>
 						</div>
 						<div class="item">
                             <h1>Design is about<br><span class="accent-color">great team</span></h1>
                             <h4>we hire only the best professionals</h4>
-							<button>Check our team</button>
+							<a href="#teamSection"><button>Check our team</button></a>
 						</div>
 						<div class="item">
                             <h1>Design is about<br><span class="accent-color">fair prices</span></h1>
                             <h4>we guarantee the best price</h4>
-							<button>See our prices</button>
+							<a href="#priceSection"><button>See our prices</button></a>
 						</div>
 					</div>
                 </div>
@@ -250,154 +252,148 @@
                 <div class="container text-center">
                     <h1 class="text-uppercase">Our team</h1>
                     <h5 class="text-uppercase">Our co-workers</h5>
-                    <div class="carousel container">
-                        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel2" data-slide-to="1"></li>
-                                <li data-target="#myCarousel2" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-1.png" alt="">
-                                                <h3>JANE DOE</h3>
-                                                <h4>Master mind</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-2.png" alt="">
-                                                <h3>MIKE SHILLER</h3>
-                                                <h4>Creative head</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-3.png" alt="">
-                                                <h3>ANNA JOHNS</h3>
-                                                <h4>Technical lead</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div id="carousel2">
+                        <ul>
+                            <li class="active">
+                                <div class="team-column">
+                                    <img src="./images/img-team-1.png" alt="">
+                                    <h3>JANE DOE</h3>
+                                    <h4>Master mind</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                 </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-5.png" alt="">
-                                                <h3>JAMES BOND</h3>
-                                                <h4>Team leader</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-6.png" alt="">
-                                                <h3>JESSICA SMITH</h3>
-                                                <h4>Marketing specialist</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-4.png" alt="">
-                                                <h3>CRISTINA DWELL</h3>
-                                                <h4>Graphic designer</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-2.png" alt="">
+                                    <h3>MIKE SHILLER</h3>
+                                    <h4>Creative head</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                 </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-3.png" alt="">
-                                                <h3>JOLA CORDEL</h3>
-                                                <h4>Web developer</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-1.png" alt="">
-                                                <h3>ZARA SMORE</h3>
-                                                <h4>Front-end developer</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="team-column">
-                                                <img src="./images/img-team-2.png" alt="">
-                                                <h3>OLIVIER JANIAK</h3>
-                                                <h4>Back-end developer</h4>
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-3.png" alt="">
+                                    <h3>ANNA JOHNS</h3>
+                                    <h4>Technical lead</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-5.png" alt="">
+                                    <h3>JAMES BOND</h3>
+                                    <h4>Team leader</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-6.png" alt="">
+                                    <h3>JESSICA SMITH</h3>
+                                    <h4>Marketing specialist</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-4.png" alt="">
+                                    <h3>CRISTINA DWELL</h3>
+                                    <h4>Graphic designer</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-7.png" alt="">
+                                    <h3>JOLA CORDEL</h3>
+                                    <h4>Web developer</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-9.png" alt="">
+                                    <h3>ZARA SMORE</h3>
+                                    <h4>Front-end developer</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="team-column">
+                                    <img src="./images/img-team-8.png" alt="">
+                                    <h3>OLIVIER JANIAK</h3>
+                                    <h4>Back-end developer</h4>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="carousel2-indicators">
+                        <ol>
+                            <li class="active" id="1"></li>
+                            <li id="2"></li>
+                            <li id="3"></li>
+                            <li class="display" id="4"></li>
+                            <li class="display" id="5"></li>
+                            <li class="display" id="6"></li>
+                            <li class="display" id="7"></li>
+                            <li class="display" id="8"></li>
+                            <li class="display" id="9"></li>
+                        </ol>
                     </div>
                 </div>
             </section>
@@ -637,7 +633,7 @@
                         </div>
                      </div>
                      <div class="text-center">
-                         <button class="text-uppercase">get in touch</button>
+                        <a href="#contactSection"><button class="text-uppercase">get in touch</button></a>
                     </div>
                 </div>
             </section>
